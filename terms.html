@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions — Tropic Moderne Vietnam</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --cream: #f5f0e8;
+            --sand: #e8dece;
+            --gold: #b89a6a;
+            --gold-light: #d4b896;
+            --dark: #1a1610;
+            --brown: #3d2f1e;
+            --text: #2c2318;
+            --muted: #8c7a66;
+            --white: #fdfaf6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 28px 60px;
+            background: linear-gradient(to bottom, rgba(26, 22, 16, 0.7) 0%, transparent 100%);
+            backdrop-filter: blur(0px);
+            transition: background 0.4s, backdrop-filter 0.4s;
+        }
+
+        nav.scrolled {
+            background: rgba(26, 22, 16, 0.92);
+            backdrop-filter: blur(12px);
+            padding: 18px 60px;
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: var(--cream);
+            letter-spacing: 0.08em;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(245, 240, 232, 0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--gold-light);
+        }
+
+        header {
+            position: relative;
+            min-height: 700px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            background: var(--dark);
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(160deg, rgba(26, 22, 16, 0.55) 0%, rgba(61, 47, 30, 0.3) 60%, rgba(184, 154, 106, 0.15) 100%),
+                url('https://lh3.googleusercontent.com/d/1LphV6aclAD62OzSWMuhZ-rvdFnY4LPYT') center/cover no-repeat;
+            transform: scale(1.05);
+            animation: slowZoom 18s ease-in-out infinite alternate;
+            filter: blur(2px);
+        }
+
+        @keyframes slowZoom {
+            from {
+                transform: scale(1.05);
+            }
+
+            to {
+                transform: scale(1.12);
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            animation: fadeUp 1.2s ease both;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-eyebrow {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 300;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: var(--gold-light);
+            margin-bottom: 20px;
+        }
+
+        .hero-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(3.5rem, 7vw, 6.5rem);
+            font-weight: 300;
+            line-height: 1.05;
+            color: var(--cream);
+            margin-bottom: 24px;
+        }
+
+        .hero-title em {
+            font-style: italic;
+            color: var(--gold-light);
+        }
+
+        .hero-sub {
+            font-size: 0.95rem;
+            font-weight: 300;
+            letter-spacing: 0.08em;
+            color: rgba(245, 240, 232, 0.7);
+            margin-bottom: 48px;
+            max-width: 720px;
+        }
+
+        section {
+            padding: 100px 60px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-size: 0.68rem;
+            font-weight: 400;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 14px;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.2rem, 4vw, 3.4rem);
+            font-weight: 300;
+            line-height: 1.1;
+            color: var(--brown);
+            margin-bottom: 24px;
+        }
+
+        .content-block {
+            margin-bottom: 48px;
+        }
+
+        .content-block h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            margin-bottom: 14px;
+            color: var(--dark);
+        }
+
+        .content-block p {
+            font-size: 0.98rem;
+            line-height: 1.8;
+            color: var(--text);
+            margin-bottom: 16px;
+        }
+
+        .content-block ul {
+            list-style: disc inside;
+            margin-left: 1rem;
+            color: var(--text);
+        }
+
+        .content-block ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-note {
+            font-size: 0.88rem;
+            color: var(--muted);
+            margin-top: 16px;
+        }
+
+        @media (max-width: 900px) {
+            nav {
+                padding: 22px 36px;
+            }
+
+            section {
+                padding: 80px 36px;
+            }
+
+            .nav-links {
+                gap: 24px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 18px;
+                padding: 22px 24px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 18px;
+            }
+
+            section {
+                padding: 60px 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav id="nav">
+        <a href="index.html" class="logo">Tropic <span>Moderne </span>Vietnam</a>
+        <ul class="nav-links">
+            <li><a href="index.html#properties">Properties</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="our-story.html">Our Story</a></li>
+            <li><a href="terms.html" class="active">Terms</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <header>
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <p class="hero-eyebrow">Terms & Conditions</p>
+            <h1 class="hero-title">Terms & Conditions</h1>
+            <p class="hero-sub">These terms govern how you use Tropic Moderne Vietnam's website and services. Please
+                read them carefully before booking or interacting with any content.</p>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <p class="section-label">Terms of Stay</p>
+            <h2 class="section-title">Thoughtfully simple, just as your stay should be.</h2>
+            <div class="content-block">
+                <h3>Arrival & Departure</h3>
+                <p>Check-in from 14:00 | Check-out before 12:00
+                    Early arrival or late departure can be arranged subject to availability.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Reservations</h3>
+                <p>Your stay is confirmed once payment has been received.
+                    We will guide you through the process to keep everything seamless.</p>
+            </div>
+            <div class="content-block">
+                <h3>Flexibility</h3>
+                <p>We understand that plans may change.
+                    Cancellations will be handled with fairness and clarity, based on the agreed policy at the time of
+                    booking.</p>
+            </div>
+            <div class="content-block">
+                <h3>Your Stay</h3>
+                <p>Each villa is a private sanctuary.
+                    We kindly ask that registered occupancy is respected and the space is treated with care.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Quiet Enjoyment</h3>
+                <p>To maintain a peaceful environment, we ask that noise is kept low after 22:00.
+                    Events or gatherings may be arranged upon request.
+                </p>
+            </div>
+
+            <div class="content-block">
+                <h3>Resort Living</h3>
+                <p>As part of Premier Village Danang Resort, certain guidelines apply to ensure a seamless experience
+                    for all guests.
+                    We’re Here for You
+
+                    Should you need anything at all, our team is always available to assist.
+
+                    Detailed Terms & ConditionsWe’re Here for You
+
+                    Should you need anything at all, our team is always available to assist.
+
+                    Detailed Terms & Conditions</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Detailed Terms & Conditions</h3>
+                <p>1. Check-in & Check-out<br>
+                    Check-in: from 14:00<br>
+                    Check-out: before 12:00<br>
+                    Early check-in / late check-out subject to availability and may incur additional charges. <br><br>
+                    2. Booking & Payment<br>
+                    A deposit or full payment is required to confirm the reservation.<br>
+                    Payment methods will be communicated upon booking.<br>
+                    Bookings are not guaranteed until payment is received.<br><br>
+                    3. Cancellation Policy<br>
+                    Free cancellation within 14 days prior to arrival<br>
+                    Late cancellations may incur partial or full charges<br>
+                    No-shows will be charged 100%<br><br>
+                    4. Security Deposit<br>
+                    A refundable security deposit may be required upon check-in<br>
+                    Damages, loss, or excessive cleaning will be deducted accordingly<br><br>
+                    5. Occupancy<br>
+                    Guests must not exceed the number stated in the reservation<br>
+                    Additional guests may incur extra charges or be denied access<br><br>
+                    6. House Rules<br>
+                    No parties or events without prior approval<br>
+                    Quiet hours: 22:00 – 08:00<br>
+                    No smoking inside the villa<br>
+                    No pets unless agreed in advance<br><br>
+                    7. Damages & Liability<br>
+                    Guests are responsible for any damage caused during the stay<br>
+                    The host is not liable for loss of personal belongings or accidents<br><br>
+                    8. Resort Regulations<br>
+                    Guests must comply with all regulations of Premier Village Danang Resort<br><br>
+                    9. Force Majeure<br>
+                    The host is not responsible for disruptions caused by events beyond control (natural disasters,
+                    government actions, etc.)<br>
+                </p>
+            </div>
+            <p class="footer-note">Last updated: April 2026.</p>
+        </section>
+    </main>
+
+</body>
+
+</html>

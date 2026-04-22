@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us — Tropic Moderne Vietnam</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --cream: #f5f0e8;
+            --sand: #e8dece;
+            --gold: #b89a6a;
+            --gold-light: #d4b896;
+            --dark: #1a1610;
+            --brown: #3d2f1e;
+            --text: #2c2318;
+            --muted: #8c7a66;
+            --white: #fdfaf6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        /* ── HERO ── */
+        header {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            background: var(--dark);
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(160deg, rgba(26, 22, 16, 0.55) 0%, rgba(61, 47, 30, 0.3) 60%, rgba(184, 154, 106, 0.15) 100%),
+                url('https://lh3.googleusercontent.com/d/1_rl8OgPJYLyXvv61W0ymiuiFeXuRxzg6') center/cover no-repeat;
+            transform: scale(1.05);
+            animation: slowZoom 18s ease-in-out infinite alternate;
+            filter: blur(2px);
+        }
+
+        @keyframes slowZoom {
+            from {
+                transform: scale(1.05);
+            }
+
+            to {
+                transform: scale(1.12);
+            }
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 28px 60px;
+            background: linear-gradient(to bottom, rgba(26, 22, 16, 0.7) 0%, transparent 100%);
+            backdrop-filter: blur(0px);
+            transition: background 0.4s, backdrop-filter 0.4s;
+        }
+
+        nav.scrolled {
+            background: rgba(26, 22, 16, 0.92);
+            backdrop-filter: blur(12px);
+            padding: 18px 60px;
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: var(--cream);
+            letter-spacing: 0.08em;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(245, 240, 232, 0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold-light);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            animation: fadeUp 1.2s ease both;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-eyebrow {
+            font-family: 'Jost', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 300;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: var(--gold-light);
+            margin-bottom: 20px;
+        }
+
+        .hero-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(3.5rem, 7vw, 6.5rem);
+            font-weight: 300;
+            line-height: 1.05;
+            color: var(--cream);
+            margin-bottom: 24px;
+        }
+
+        .hero-title em {
+            font-style: italic;
+            color: var(--gold-light);
+        }
+
+        .hero-sub {
+            font-size: 0.9rem;
+            font-weight: 300;
+            letter-spacing: 0.08em;
+            color: rgba(245, 240, 232, 0.7);
+            margin-bottom: 48px;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            padding: 14px 42px;
+            border: 1px solid var(--gold);
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 0.75rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .hero-cta:hover {
+            background: var(--gold);
+            color: var(--dark);
+        }
+
+        /* ── SECTIONS ── */
+        section {
+            padding: 100px 60px;
+        }
+
+        .section-label {
+            font-size: 0.68rem;
+            font-weight: 400;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.2rem, 4vw, 3.4rem);
+            font-weight: 300;
+            line-height: 1.1;
+            color: var(--brown);
+            margin-bottom: 16px;
+        }
+
+        .section-title em {
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        .section-desc {
+            font-size: 0.9rem;
+            font-weight: 300;
+            color: var(--muted);
+            line-height: 1.8;
+            max-width: 520px;
+        }
+
+        /* ── ABOUT CONTENT ── */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .about-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.05rem;
+            font-style: italic;
+            color: var(--muted);
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+
+        .about-details {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .about-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .about-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--sand);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            border-radius: 50%;
+        }
+
+        .about-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--gold);
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        .about-text-content {
+            font-size: 0.88rem;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .about-text-content strong {
+            color: var(--brown);
+            display: block;
+            font-weight: 400;
+            margin-bottom: 4px;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: var(--dark);
+            padding: 60px 60px 40px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+        }
+
+        .footer-brand .logo {
+            font-size: 1.5rem;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+
+        .footer-desc {
+            font-size: 0.82rem;
+            font-weight: 300;
+            color: rgba(245, 240, 232, 0.45);
+            line-height: 1.8;
+            max-width: 300px;
+        }
+
+        .footer-col-title {
+            font-size: 0.68rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-links a {
+            font-size: 0.82rem;
+            font-weight: 300;
+            color: rgba(245, 240, 232, 0.5);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold-light);
+        }
+
+        .footer-bottom {
+            background: var(--dark);
+            padding: 20px 60px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-copy {
+            font-size: 0.7rem;
+            color: rgba(245, 240, 232, 0.25);
+            letter-spacing: 0.08em;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 900px) {
+            nav {
+                padding: 20px 24px;
+            }
+
+            nav.scrolled {
+                padding: 14px 24px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            section {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            footer {
+                grid-template-columns: 1fr;
+                padding: 40px 24px;
+            }
+
+            .footer-bottom {
+                padding: 20px 24px;
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav id="nav">
+        <a href="index.html" class="logo">Tropic <span>Moderne </span>Vietnam</a>
+        <ul class="nav-links">
+            <li><a href="index.html#properties">Properties</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="our-story.html">Our story</a></li>
+            <li><a href="terms.html">Terms</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <header>
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <p class="hero-eyebrow">About Us</p>
+            <h1 class="hero-title">Crafting <em>Memories</em> in Paradise</h1>
+            <p class="hero-sub">Discover the passion behind Tropic Moderne Vietnam</p>
+            <a href="#story" class="hero-cta">Learn More</a>
+        </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="story">
+        <div class="about-content">
+            <div>
+                <p class="section-label">About Us</p>
+                <h2 class="section-title">A Philosophy of <em>Refined Tropical Living</em> </h2>
+                <p class="about-text">"Tropic Moderne was born from a simple belief—that true luxury is not defined by
+                    excess, but by how a space makes you feel.
+
+                    Rooted in the spirit of tropical living, we curate a collection of private villas and residences
+                    where modern design meets the quiet beauty of nature. Each property is carefully selected not only
+                    for its location, but for its ability to create a sense of calm, intimacy, and belonging.
+
+                    We are drawn to spaces where light moves gently through open architecture, where indoor and outdoor
+                    living blend effortlessly, and where every detail—seen and unseen—contributes to a seamless
+                    experience.
+
+                    At Tropic Moderne, hospitality is deeply personal.
+                    We do not simply offer accommodation; we craft stays that feel considered, private, and quietly
+                    exceptional. From the moment you arrive, our role is to ensure that everything flows naturally—so
+                    you can slow down, reconnect, and experience your surroundings with ease.
+
+                    Whether it is a coastal retreat, a gathering with loved ones, or a moment of solitude, each stay is
+                    designed to leave a lasting impression—subtle, yet unforgettable.
+
+                    This is Tropic Moderne.
+                    A private world, thoughtfully curated.."</p>
+            </div>
+
+            <div class="about-details">
+                <div class="about-item">
+                    <div class="about-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                    </div>
+                    <div class="about-text-content">
+                        <strong>Curated Selection</strong>
+                        Each property is handpicked for its unique charm, location, and quality, ensuring only the
+                        finest options for our guests.
+                    </div>
+                </div>
+                <div class="about-item">
+                    <div class="about-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <circle cx="12" cy="11" r="3" />
+                        </svg>
+                    </div>
+                    <div class="about-text-content">
+                        <strong>Prime Locations</strong>
+                        Strategically located in Da Nang's most desirable areas, our properties offer convenience and
+                        breathtaking views.
+                    </div>
+                </div>
+                <div class="about-item">
+                    <div class="about-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <div class="about-text-content">
+                        <strong>Personalized Service</strong>
+                        Our dedicated team provides 24/7 concierge support, ensuring every detail of your stay is
+                        perfect.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-brand">
+            <a href="index.html" class="logo">Tropic <span>Moderne </span>Vietnam</a>
+            <p class="footer-desc">Luxury villas and curated apartments in Da Nang, Vietnam. We offer exceptional stays
+                with world-class service and unforgettable views.</p>
+        </div>
+        <div>
+            <p class="footer-col-title">Properties</p>
+            <ul class="footer-links">
+                <li><a href="index.html#properties">Properties</a></li>
+            </ul>
+        </div>
+        <div>
+            <p class="footer-col-title">Company</p>
+            <ul class="footer-links">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="our-story.html">Our Story</a></li>
+                <li><a href="#">Guest Reviews</a></li>
+                <li><a href="terms.html">Terms & Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <span class="footer-copy">© 2026 Tropic Moderne Vietnam. All rights reserved.</span>
+        <span class="footer-copy">Da Nang, Vietnam</span>
+    </div>
+
+    <script>
+        // Nav scroll effect
+        window.addEventListener('scroll', () => {
+            document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 60);
+        });
+    </script>
+</body>
+
+</html>
