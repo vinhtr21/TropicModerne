@@ -1,7 +1,7 @@
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import type { Metadata } from 'next'
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 export const metadata: Metadata = {
   title: 'Our Story — Tropic Moderne Vietnam',
   description: 'The origin of Tropic Moderne — a passion for private, intentional, quietly refined spaces.',

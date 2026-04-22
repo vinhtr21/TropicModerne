@@ -2,6 +2,7 @@ import Nav from './components/Nav'
 import Footer from './components/Footer'
 import HomePage from './components/HomePage'
 import type { Metadata } from 'next'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: 'Tropic Moderne Vietnam — Luxury Villas & Apartments in Da Nang',

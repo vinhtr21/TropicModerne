@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 export default function Nav({ active }: { active?: string }) {
   const [scrolled, setScrolled] = useState(false)
 
